@@ -1,0 +1,25 @@
+# Maven
+target/
+dependency-reduced-pom.xml
+
+# Logs
+*.log
+logs/
+
+# Environment variables
+.env
+.env.*
+
+# IntelliJ
+.idea/
+*.iml
+out/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
