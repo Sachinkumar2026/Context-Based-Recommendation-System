@@ -10,4 +10,6 @@ public interface ContentRepository extends JpaRepository<Content,Long> {
     List<Content> findByPlatform(String platform);
 
     List<Content> findByDurationLessThanEqual(int duration);
+
+    List<Content> findByPlatformAndDurationLessThanEqual(String platform, int duration);
 }
