@@ -1,8 +1,13 @@
 package com.example.entertainment_recommender.model;
 
 import jakarta.persistence.*;
-
+import lombok.*;
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class UserPreference {
 
 
