@@ -23,6 +23,7 @@ public class RecommendationController {
             @RequestBody RecommendationRequest request
             ){
         return recommendationService.recommendContent(
+                request.getUserId(),
                 request.getDuration(),
                 request.getPlatform()
         );

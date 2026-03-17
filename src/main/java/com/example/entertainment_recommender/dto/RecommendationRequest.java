@@ -7,6 +7,7 @@ import lombok.Setter;
 @Setter
 public class RecommendationRequest {
 
+    private Long userId;
     private int duration;
     private String platform;
 }
