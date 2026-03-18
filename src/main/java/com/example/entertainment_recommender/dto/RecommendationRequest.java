@@ -10,4 +10,8 @@ public class RecommendationRequest {
     private Long userId;
     private int duration;
     private String platform;
+
+    private String context;
+
+    private String watchingWith;
 }

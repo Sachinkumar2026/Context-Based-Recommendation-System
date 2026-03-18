@@ -25,7 +25,9 @@ public class RecommendationController {
         return recommendationService.recommendContent(
                 request.getUserId(),
                 request.getDuration(),
-                request.getPlatform()
+                request.getPlatform(),
+                request.getContext(),
+                request.getWatchingWith()
         );
     }
 
