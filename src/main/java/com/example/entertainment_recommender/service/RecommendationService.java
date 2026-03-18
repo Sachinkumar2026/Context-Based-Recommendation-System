@@ -7,6 +7,7 @@ import com.example.entertainment_recommender.repository.ContentRepository;
 import com.example.entertainment_recommender.repository.UserPreferenceRepository;
 import com.example.entertainment_recommender.repository.WatchHistoryRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -24,6 +25,9 @@ public class RecommendationService {
     private final UserPreferenceRepository userPreferenceRepository;
     private final WatchHistoryRepository watchHistoryRepository;
 
+
+    @Cacheable(value = "recommendations",
+            key = "#userId + '-' + #duration + '-' + #platform + '-' + #context + '-' + #watchingWith")
     public List<Content> recommendContent(Long userId, int duration, String platform,String context,String watchingWith) {
 
         UserPreference pref = userPreferenceRepository
